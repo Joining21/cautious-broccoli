@@ -35,10 +35,6 @@ export default function Register() {
       .post("/api/register", {
         user: user,
         password: password,
-        name: name,
-        surname: surname,
-        email: email,
-        phoneNumber: phoneNumber,
       })
       .then(function (response) {
         if(response.data.admin){
@@ -71,72 +67,25 @@ export default function Register() {
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField
-            required
-            value={user}
-            onChange={handleUser}
-            id="outlined-basic"
-            label={user ? "" : "Username"}
-            variant="outlined"
-            fullWidth
-            margin="dense"
-          />
+              margin="normal"
+              required
+              fullWidth
+              id="user"
+              label="User"
+              name="user"
+              autoComplete="user"
+              autoFocus
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+            />
 
-          <TextField
-            required
-            value={password}
-            onChange={handlePassword}
-            id="outlined-basic"
-            label={password ? "" : "Password"}
-            type="password"
-            variant="outlined"
-            fullWidth
-            margin="dense"
-          />
-
-          <TextField
-            value={name}
-            onChange={handleName}
-            id="outlined-basic"
-            label={name ? "" : "Name"}
-            variant="outlined"
-            fullWidth
-            margin="dense"
-          />
-
-          <TextField
-            value={surname}
-            onChange={handleSurname}
-            id="outlined-basic"
-            label={surname ? "" : "Surname"}
-            variant="outlined"
-            fullWidth
-            margin="dense"
-          />
-          <TextField
-            value={email}
-            onChange={handleEmail}
-            id="outlined-basic"
-            label={email ? "" : "Email"}
-            variant="outlined"
-            fullWidth
-            margin="dense"
-          />
-
-          <TextField
-            value={phoneNumber}
-            onChange={handlePhoneNumber}
-            id="outlined-basic"
-            label={phoneNumber ? "" : "Phonenumber"}
-            type="number"
-            inputProps={{
-                inputMode: 'numeric',
-                pattern: '[0-9]*', //Comprobar si funciona
-            }}
-            variant="outlined"
-            fullWidth
-            margin="dense"
-          />
-            
             <Button
               type="submit"
               fullWidth
