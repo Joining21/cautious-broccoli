@@ -1,0 +1,16 @@
+{
+  "name": "Nombre",
+  "version": "1.0.0" ,
+  "description ": "",
+  "main": "index.js",
+  "engines": {
+  "npm": "9.6.5"
+  },
+  "scripts": {
+  "start": "cd backend && node index.js",
+  "build": "cd backend && npm install && cd ../frontend && npm install && npm run build && rm -rf node_modules",
+  "test": "echo \"Error: no test specified \" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
