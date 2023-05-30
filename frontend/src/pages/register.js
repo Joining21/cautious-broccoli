@@ -15,7 +15,7 @@ import axios from 'axios';
 
 const theme = createTheme();
 
-export default function Login() {
+export default function Register() {
 
     const navigate = useNavigate();
     
