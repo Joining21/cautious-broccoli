@@ -45,7 +45,7 @@ export default function Login() {
   };
 
   const handleLink = (event) => {
-    navigate("/api/register"); //navegar a lapagina de registro
+    navigate("/register"); //navegar a lapagina de registro
   };
 
   return (

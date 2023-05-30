@@ -25,10 +25,6 @@ export default function Register() {
 
     var user = data.get("user");
     var password = data.get("password");
-    var name = data.get("user");
-    var surname = data.get("password");
-    var email = data.get("user");
-    var phoneNumber = data.get("password");
 
     
     axios
